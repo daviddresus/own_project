@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <!--background video-->
+    <video autoplay muted loop>
+        <source src="./vid/index_background.mp4" type="video/mp4">
+    </video>
+
+    <!--navbar-->
+    <div id="navbar">
+        <nav>
+            <ul>
+
+                <!--hamburger menu to open navbar on the left-->
+                <li id="hamburger_menu" onclick="open_links()"><img src="img/hamburger.png" alt="Hamburger Menu"></li>
+
+                <!--page-->
+                <li class="links">
+                    <a href="ueber_mich.html">
+                        <h2>
+                            <span class="de">Über mich</span>
+                            <span class="fr">À propos de moi</span>
+                            <span class="en">About me</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li class="links">
+                    <a href="faehigkeiten.html">
+                        <h2>
+                            <span class="de">Fähigkeiten</span>
+                            <span class="fr">Compétences</span>
+                            <span class="en">Skills</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li class="links">
+                    <a href="familie.html">
+                        <h2>
+                            <span class="de">Familie</span>
+                            <span class="fr">Famille</span>
+                            <span class="en">Family</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li class="links">
+                    <a href="projekte.html">
+                        <h2>
+                            <span class="de">Projekte</span>
+                            <span class="fr">Projets</span>
+                            <span class="en">Projects</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li class="links">
+                    <a href="demos.html">
+                        <h2>
+                            <span class="de">Demos</span>
+                            <span class="fr">Démos</span>
+                            <span class="en">Demos</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li class="links">
+                    <a href="kontakt.html">
+                        <h2>
+                            <span class="de">Kontakt</span>
+                            <span class="fr">Contact</span>
+                            <span class="en">Contact</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--language selector-->
+                <li class="lang">
+                    <select id="lang" name="lang" onChange="changeLang(this.options[this.selectedIndex].value)">
+                        <option value="de" selected>Deutsch</option>
+                        <option value="fr">Français</option>
+                        <option value="en">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--navbar for smaller devices-->
+    <div id="menu_display">
+        <nav id="side_navbar">
+            <ul>
+
+                <!--X image to close the navbar-->
+                <li id="close_button" onclick="close_links()"><img src="img/close_icon.png" alt="Schliessen"></li>
+
+                <!--page-->
+                <li>
+                    <a href="ueber_mich.html">
+                        <h2>
+                            <span class="de">Über mich</span>
+                            <span class="fr">À propos de moi</span>
+                            <span class="en">About me</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li>
+                    <a href="faehigkeiten.html">
+                        <h2>
+                            <span class="de">Fähigkeiten</span>
+                            <span class="fr">Compétences</span>
+                            <span class="en">Skills</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li>
+                    <a href="familie.html">
+                        <h2>
+                            <span class="de">Familie</span>
+                            <span class="fr">Famille</span>
+                            <span class="en">Family</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li>
+                    <a href="projekte.html">
+                        <h2>
+                            <span class="de">Projekte</span>
+                            <span class="fr">Projets</span>
+                            <span class="en">Projects</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li>
+                    <a href="demos.html">
+                        <h2>
+                            <span class="de">Demos</span>
+                            <span class="fr">Démos</span>
+                            <span class="en">Demos</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li>
+                    <a href="kontakt.html">
+                        <h2>
+                            <span class="de">Kontakt</span>
+                            <span class="fr">Contact</span>
+                            <span class="en">Contact</span>
+                        </h2>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--impressum-->
+    <div id="impressum_shadow">
+        <div id="impressum">
+            <img onclick="close_impressum()" src="img/close_icon.png" alt="Schliessen">
+            <h1 style="clear: both;">Impressum</h1>
+            <h2>Diensteanbieter</h2>
+            <p>David Esteves Rodrigues</p>
+            <p>Müntschemiergasse 3</p>
+            <p>3232</p>
+            <p>Schweiz</p>
+            <h2>Kontaktmöglichkeiten</h2>
+            <p>E-Mail-Adresse:</p>
+            <p><a href="mailto:david.estevesrodrigues@bwdbern.ch"
+                    style="text-decoration: none; color: #3b93f7;">david.estevesrodrigues@bwdbern.ch</a></p><br>
+            <p>Telefon:</p>
+            <p><a href="tel:0798704446" style="text-decoration: none; color: #3b93f7;">0798704446</a></p>
+        </div>
+    </div>
+    <main>
+
+        <!--title-->
+        <h1>
+            <span class="de">Start</span>
+            <span class="fr">Accueil</span>
+            <span class="en">Home</span>
+        </h1>
+
+        <!--text-->
+        <p>
+            <span class="de">Willkommen auf meiner Website!<br>Ich bedanke mich sehr bei dich/ihnen für diesen
+                Besuch<br>Unten dran stehen jeweils die Seiten mit ihren Themen:</span>
+            <span class="fr">Bienvenue sur mon site !<br>Je tiens à vous remercier de votre visite<br>Les pages avec
+                leurs sujets sont listées ci-dessous:</span>
+            <span class="en">Welcome to my website!<br>I would like to thank you very much for your visit<br>The pages
+                with their topics are listed below:</span>
+        </p>
+
+        <!--section grid-->
+        <div class="grid">
+
+            <!--section-->
+            <a href="ueber_mich.html" onmouseover="background_img_1_on()" onmouseout="background_img_off()">
+                <div class="box">
+                    <section>
+
+                        <!--background image-->
+                        <img src="img/about_me.png" alt="Lupe" class="section_image" id="img_1">
+
+                        <!--title-->
+                        <h2>
+                            <span class="de">Über mich</span>
+                            <span class="fr">À propos de moi</span>
+                            <span class="en">About me</span>
+                        </h2>
+
+                        <!--text-->
+                        <p>
+                            <span class="de">Hier stehen allgemeine Informationen über mich:</span>
+                            <span class="fr">Voici des informations générales sur moi:</span>
+                            <span class="en">Here is general information about me:</span>
+                        </p>
+
+                        <!--text-->
+                        <p>
+                            <span class="de">Vorname, Nachname, Alter, Hobbies, usw.</span>
+                            <span class="fr">Prénom, nom, âge, loisirs, etc.</span>
+                            <span class="en">First name, last name, age, hobbies, etc.</span>
+                        </p>
+                    </section>
+                </div>
+            </a>
+
+            <!--section-->
+            <a href="faehigkeiten.html" onmouseover="background_img_2_on()" onmouseout="background_img_off()">
+                <div class="box">
+                    <section>
+
+                        <!--background image-->
+                        <img src="img/faehigkeiten.png" alt="Bücher" class="section_image" id="img_2">
+
+                        <!--title-->
+                        <h2>
+                            <span class="de">Fähigkeiten</span>
+                            <span class="fr">Compétences</span>
+                            <span class="en">Skills</span>
+                        </h2>
+
+                        <!--text-->
+                        <p>
+                            <span class="de">Hier stehen alle meine Kenntnisse, die ich bis jetzt habe.</span>
+                            <span class="fr">Voici toutes les connaissances que j'ai à ce jour.</span>
+                            <span class="en">Here is all the knowledge I have so far.</span>
+                        </p>
+                    </section>
+                </div>
+            </a>
+
+            <!--section-->
+            <a href="familie.html" onmouseover="background_img_3_on()" onmouseout="background_img_off()">
+                <div class="box">
+                    <section>
+
+                        <!--background image-->
+                        <img src="img/familie.png" alt="Familie" class="section_image" id="img_3">
+
+                        <!--title-->
+                        <h2>
+                            <span class="de">Familie</span>
+                            <span class="fr">Famille</span>
+                            <span class="en">Family</span>
+                        </h2>
+
+                        <!--text-->
+                        <p>
+                            <span class="de">Hier werden Personen, die zu meiner Familie gehören, gezeigt und
+                                beschrieben.</span>
+                            <span class="fr">Ici, les personnes appartenant à ma famille sont présentées et
+                                décrites.</span>
+                            <span class="en">Here people belonging to my family are shown and described.</span>
+                        </p>
+                    </section>
+                </div>
+            </a>
+
+            <!--section-->
+            <a href="projekte.html" onmouseover="background_img_4_on()" onmouseout="background_img_off()">
+                <div class="box">
+                    <section>
+
+                        <!--background image-->
+                        <img src="img/projekte.png" alt="Projekte" class="section_image" id="img_4">
+
+                        <!--title-->
+                        <h2>
+                            <span class="de">Projekte</span>
+                            <span class="fr">Projets</span>
+                            <span class="en">Projects</span>
+                        </h2>
+
+                        <!--text-->
+                        <p>
+                            <span class="de">Hier stehen Projekte die schon erledigt wurden und auch diese, die ich noch
+                                betätigen werde.</span>
+                            <span class="fr">Voici des projets qui ont déjà été réalisés et aussi ceux sur lesquels je
+                                vais encore travailler.</span>
+                            <span class="en">Here are projects that have already been completed and also those that I
+                                will still work on.</span>
+                        </p>
+                    </section>
+                </div>
+            </a>
+
+            <!--section-->
+            <a href="demos.html" onmouseover="background_img_5_on()" onmouseout="background_img_off()">
+                <div class="box">
+                    <section>
+
+                        <!--background image-->
+                        <img src="img/demos.png" alt="Geräte" class="section_image" id="img_5">
+
+                        <!--title-->
+                        <h2>
+                            <span class="de">Demos</span>
+                            <span class="fr">démos</span>
+                            <span class="en">Demos</span>
+                        </h2>
+
+                        <!--text-->
+                        <p>
+                            <span class="de">Hier können sie einige Projekte von mir selbst anschauen und ausprobieren
+                                (Nur auf PC/Laptop).</span>
+                            <span class="fr">Ici vous pouvez voir et essayer certains de mes projets (Uniquement sur
+                                PC/Laptop).</span>
+                            <span class="en">Here you can see and try out some of my projects (Only on
+                                PC/Laptop).</span>
+                        </p>
+                    </section>
+                </div>
+            </a>
+
+            <!--section-->
+            <a href="kontakt.html" onmouseover="background_img_6_on()" onmouseout="background_img_off()">
+                <div class="box">
+                    <section>
+
+                        <!--background image-->
+                        <img src="img/kontakt.png" alt="SMS" class="section_image" id="img_6">
+
+                        <!--title-->
+                        <h2>
+                            <span class="de">Kontakt</span>
+                            <span class="fr">Contact</span>
+                            <span class="en">Contact</span>
+                        </h2>
+
+                        <!--text-->
+                        <p>
+                            <span class="de">Hier sind alle Kontaktmöglichkeiten aufgelistet, um mich zu
+                                Kontaktieren.</span>
+                            <span class="fr">Toutes les options de contact pour me contacter sont listées ici.</span>
+                            <span class="en">All contact options for contacting me are listed here.</span>
+                        </p>
+                    </section>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!--footer-->
+    <footer>
+        <h2>Copyright © 2022 David Esteves Rodrigues. All rights reserved.</h2>
+
+        <!--links-->
+        <h2>
+            <span class="de">Weitere Links:</span>
+            <span class="fr">Plus de liens :</span>
+            <span class="en">More links:</span>
+        </h2>
+        <a onclick="open_impressum()" style="cursor: pointer;">Impressum</a><br><br>
+        <a href="javascript:void(0)">link</a><br><br>
+        <a href="javascript:void(0)">link</a>
+    </footer>
+    <script src="javascript.js"></script>
+</body>
+
+</html>

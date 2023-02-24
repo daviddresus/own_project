@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Familie</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <!--background video-->
+    <video autoplay muted loop style="opacity: 0.4;">
+        <source src="./vid/familie_background.mp4" type="video/mp4">
+    </video>
+
+    <!--navbar-->
+    <div id="navbar">
+        <nav>
+            <ul>
+
+                <!--hamburger menu to open navbar on the left-->
+                <li id="hamburger_menu" onclick="open_links()"><img src="img/hamburger.png" alt="Hamburger Menu"></li>
+
+                <!--house imgage to go back to index.html-->
+                <li class="links"><a href="index.html">
+                        <h2><img src="img/home.png" alt="Home" class="home"></h2>
+                    </a></li>
+
+                <!--page-->
+                <li class="links">
+                    <a href="ueber_mich.html">
+                        <h2>
+                            <span class="de">Über mich</span>
+                            <span class="fr">À propos de moi</span>
+                            <span class="en">About me</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li class="links">
+                    <a href="faehigkeiten.html">
+                        <h2>
+                            <span class="de">Fähigkeiten</span>
+                            <span class="fr">Compétences</span>
+                            <span class="en">Skills</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li class="links">
+                    <a href="projekte.html">
+                        <h2>
+                            <span class="de">Projekte</span>
+                            <span class="fr">Projets</span>
+                            <span class="en">Projects</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li class="links">
+                    <a href="demos.html">
+                        <h2>
+                            <span class="de">Demos</span>
+                            <span class="fr">Démos</span>
+                            <span class="en">Demos</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li class="links">
+                    <a href="kontakt.html">
+                        <h2>
+                            <span class="de">Kontakt</span>
+                            <span class="fr">Contact</span>
+                            <span class="en">Contact</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--language selector-->
+                <li class="lang">
+                    <select id="lang" name="lang" onChange="changeLang(this.options[this.selectedIndex].value)">
+                        <option value="de" selected>Deutsch</option>
+                        <option value="fr">Français</option>
+                        <option value="en">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--navbar for smaller devices-->
+    <div id="menu_display">
+        <nav id="side_navbar">
+            <ul>
+
+                <!--X image to close the navbar-->
+                <li id="close_button" onclick="close_links()"><img src="img/close_icon.png" alt="Schliessen"></li>
+
+                <!--house image to go back to index.html-->
+                <li class="links"><a href="index.html">
+                        <h2><img src="img/home.png" alt="Home" class="home"></h2>
+                    </a></li>
+
+                <!--page-->
+                <li>
+                    <a href="ueber_mich.html">
+                        <h2>
+                            <span class="de">Über mich</span>
+                            <span class="fr">À propos de moi</span>
+                            <span class="en">About me</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li>
+                    <a href="faehigkeiten.html">
+                        <h2>
+                            <span class="de">Fähigkeiten</span>
+                            <span class="fr">Compétences</span>
+                            <span class="en">Skills</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li>
+                    <a href="projekte.html">
+                        <h2>
+                            <span class="de">Projekte</span>
+                            <span class="fr">Projets</span>
+                            <span class="en">Projects</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li>
+                    <a href="demos.html">
+                        <h2>
+                            <span class="de">Demos</span>
+                            <span class="fr">Démos</span>
+                            <span class="en">Demos</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li>
+                    <a href="kontakt.html">
+                        <h2>
+                            <span class="de">Kontakt</span>
+                            <span class="fr">Contact</span>
+                            <span class="en">Contact</span>
+                        </h2>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--impressum-->
+    <div id="impressum_shadow">
+        <div id="impressum">
+            <img onclick="close_impressum()" src="img/close_icon.png" alt="Schliessen">
+            <h1 style="clear: both;">Impressum</h1>
+            <h2>Diensteanbieter</h2>
+            <p>David Esteves Rodrigues</p>
+            <p>Müntschemiergasse 3</p>
+            <p>3232</p>
+            <p>Schweiz</p>
+            <h2>Kontaktmöglichkeiten</h2>
+            <p>E-Mail-Adresse:</p>
+            <p><a href="mailto:david.estevesrodrigues@bwdbern.ch"
+                    style="text-decoration: none; color: #3b93f7;">david.estevesrodrigues@bwdbern.ch</a></p><br>
+            <p>Telefon:</p>
+            <p><a href="tel:0798704446" style="text-decoration: none; color: #3b93f7;">0798704446</a></p>
+        </div>
+    </div>
+    <main>
+
+        <!--title-->
+        <h1>
+            <span class="de">Familie</span>
+            <span class="fr">Famille</span>
+            <span class="en">Family</span>
+        </h1>
+
+        <!--text with image-->
+        <div style="max-width: 90%; display: block; margin-left: auto; margin-right: auto;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Quis vel eros donec ac odio tempor. At tellus at urna condimentum mattis
+                pellentesque. Pulvinar neque laoreet suspendisse interdum consectetur libero id. Nisl suscipit
+                adipiscing bibendum est. Tortor at auctor urna nunc id cursus metus aliquam eleifend. Purus semper eget
+                duis at tellus at urna condimentum. Ultricies tristique nulla aliquet enim tortor at auctor urna. Turpis
+                massa sed elementum tempus. Aliquet nibh praesent tristique magna sit amet. Lacus sed viverra tellus in
+                hac. Orci a scelerisque purus semper. Sollicitudin ac orci phasellus egestas tellus rutrum tellus.
+                Pellentesque adipiscing commodo elit at. At consectetur lorem donec massa sapien. Platea dictumst
+                vestibulum rhoncus est pellentesque.</p>
+            <img class="bild_von_profil" src="img/profile_picture.png" alt="Leeres Profil Bild">
+            <p>Amet porttitor eget dolor morbi non arcu risus. Adipiscing at in tellus integer feugiat scelerisque
+                varius morbi. Nunc id cursus metus aliquam. Tristique et egestas quis ipsum suspendisse. Sit amet
+                venenatis urna cursus. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi.
+                Accumsan sit amet nulla facilisi morbi tempus iaculis. In hac habitasse platea dictumst quisque
+                sagittis. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum. Faucibus vitae
+                aliquet nec ullamcorper sit amet risus nullam. Non arcu risus quis varius. Purus viverra accumsan in
+                nisl nisi scelerisque eu ultrices. Etiam non quam lacus suspendisse faucibus interdum posuere. Eu mi
+                bibendum neque egestas congue quisque egestas diam in. Potenti nullam ac tortor vitae purus. Nunc id
+                cursus metus aliquam eleifend mi in nulla. Arcu bibendum at varius vel pharetra vel.</p>
+
+            <p>Eget velit aliquet sagittis id consectetur purus. In vitae turpis massa sed elementum tempus egestas.
+                Tortor at risus viverra adipiscing at in. Ac felis donec et odio pellentesque diam volutpat commodo sed.
+                Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Sagittis id consectetur
+                purus ut faucibus. Adipiscing at in tellus integer feugiat scelerisque varius. Lectus magna fringilla
+                urna porttitor rhoncus dolor purus non enim. Ac tincidunt vitae semper quis lectus nulla at volutpat.
+                Enim sed faucibus turpis in eu mi bibendum. Rutrum tellus pellentesque eu tincidunt tortor aliquam
+                nulla. Fringilla est ullamcorper eget nulla. Aliquet eget sit amet tellus. Augue interdum velit euismod
+                in. Cras adipiscing enim eu turpis egestas pretium. Orci porta non pulvinar neque laoreet suspendisse.
+                Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.</p>
+        </div>
+    </main>
+
+    <!--footer-->
+    <footer>
+        <h2>Copyright © 2022 David Esteves Rodrigues. All rights reserved.</h2>
+
+        <!--links-->
+        <h2>
+            <span class="de">Weitere Links:</span>
+            <span class="fr">Plus de liens :</span>
+            <span class="en">More links:</span>
+        </h2>
+        <a onclick="open_impressum()" style="cursor: pointer;">Impressum</a><br><br>
+        <a href="javascript:void(0)">link</a><br><br>
+        <a href="javascript:void(0)">link</a>
+    </footer>
+    <script src="javascript.js"></script>
+</body>
+
+</html>

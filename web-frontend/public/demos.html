@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Demos</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <!--background video-->
+    <video autoplay muted loop>
+        <source src="./vid/demos_background.mp4" type="video/mp4">
+    </video>
+
+    <!--navbar-->
+    <div id="navbar">
+        <nav>
+            <ul>
+
+                <!--hamburger menu to open navbar on the left-->
+                <li id="hamburger_menu" onclick="open_links()"><img src="img/hamburger.png" alt="Hamburger Menu"></li>
+
+                <!--house imgage to go back to index.html-->
+                <li class="links"><a href="index.html">
+                        <h2><img src="img/home.png" alt="Home" class="home"></h2>
+                    </a></li>
+
+                <!--page-->
+                <li class="links">
+                    <a href="ueber_mich.html">
+                        <h2>
+                            <span class="de">Über mich</span>
+                            <span class="fr">À propos de moi</span>
+                            <span class="en">About me</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li class="links">
+                    <a href="faehigkeiten.html">
+                        <h2>
+                            <span class="de">Fähigkeiten</span>
+                            <span class="fr">Compétences</span>
+                            <span class="en">Skills</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li class="links">
+                    <a href="familie.html">
+                        <h2>
+                            <span class="de">Familie</span>
+                            <span class="fr">Famille</span>
+                            <span class="en">Family</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li class="links">
+                    <a href="projekte.html">
+                        <h2>
+                            <span class="de">Projekte</span>
+                            <span class="fr">Projets</span>
+                            <span class="en">Projects</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li class="links">
+                    <a href="kontakt.html">
+                        <h2>
+                            <span class="de">Kontakt</span>
+                            <span class="fr">Contact</span>
+                            <span class="en">Contact</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--language selector-->
+                <li class="lang">
+                    <select id="lang" name="lang" onChange="changeLang(this.options[this.selectedIndex].value)">
+                        <option value="de" selected>Deutsch</option>
+                        <option value="fr">Français</option>
+                        <option value="en">English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--navbar for smaller devices-->
+    <div id="menu_display">
+        <nav id="side_navbar">
+            <ul>
+
+                <!--X image to close the navbar-->
+                <li id="close_button" onclick="close_links()"><img src="img/close_icon.png" alt="Schliessen"></li>
+
+                <!--house image to go back to index.html-->
+                <li class="links"><a href="index.html">
+                        <h2><img src="img/home.png" alt="Home" class="home"></h2>
+                    </a></li>
+
+                <!--page-->
+                <li>
+                    <a href="ueber_mich.html">
+                        <h2>
+                            <span class="de">Über mich</span>
+                            <span class="fr">À propos de moi</span>
+                            <span class="en">About me</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li>
+                    <a href="faehigkeiten.html">
+                        <h2>
+                            <span class="de">Fähigkeiten</span>
+                            <span class="fr">Compétences</span>
+                            <span class="en">Skills</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li>
+                    <a href="familie.html">
+                        <h2>
+                            <span class="de">Familie</span>
+                            <span class="fr">Famille</span>
+                            <span class="en">Family</span>
+                        </h2>
+                    </a>
+                </li>
+
+                <!--page-->
+                <li>
+                    <a href="projekte.html">
+                        <h2>
+                            <span class="de">Projekte</span>
+                            <span class="fr">Projets</span>
+                            <span class="en">Projects</span>
+                        </h2>
+                    </a>
+                </li>
+                <!--page-->
+                <li>
+                    <a href="kontakt.html">
+                        <h2>
+                            <span class="de">Kontakt</span>
+                            <span class="fr">Contact</span>
+                            <span class="en">Contact</span>
+                        </h2>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--impressum-->
+    <div id="impressum_shadow">
+        <div id="impressum">
+            <img onclick="close_impressum()" src="img/close_icon.png" alt="Schliessen">
+            <h1 style="clear: both;">Impressum</h1>
+            <h2>Diensteanbieter</h2>
+            <p>David Esteves Rodrigues</p>
+            <p>Müntschemiergasse 3</p>
+            <p>3232</p>
+            <p>Schweiz</p>
+            <h2>Kontaktmöglichkeiten</h2>
+            <p>E-Mail-Adresse:</p>
+            <p><a href="mailto:david.estevesrodrigues@bwdbern.ch"
+                    style="text-decoration: none; color: #3b93f7;">david.estevesrodrigues@bwdbern.ch</a></p><br>
+            <p>Telefon:</p>
+            <p><a href="tel:0798704446" style="text-decoration: none; color: #3b93f7;">0798704446</a></p>
+        </div>
+    </div>
+    <main>
+
+        <!--title-->
+        <h1>
+            <span class="de">Demos</span>
+            <span class="fr">Démos</span>
+            <span class="en">Demos</span>
+        </h1>
+
+        <!--text-->
+        <p>
+            <span class="de">Dies ist die "Demos" Seite.<br>Bitte Lesen Sie die "Projekte" Seite zuerst bevor sie mit
+                dem Ausprobieren anfangen.<br>Bei den unteren Seiten befindet sich jeweils ein Knopf unten links,<br>
+                den sie drücken können, um zurück auf diese Seite zu gelangen</span>
+            <span class="fr">Ceci est la page "Démos".<br>Veuillez d'abord lire la page "Projets" avant de
+                l'essayer.<br>Les pages du bas ont un bouton en bas à gauche<br> sur lequel vous pouvez appuyer pour
+                revenir à cette page</span>
+            <span class="en">This is the "Demos" page.<br>Please read the "Projects" page first before trying it
+                out.<br>The bottom pages have a button on the bottom left<br> that you can press to get back to this
+                page</span>
+        </p>
+
+        <!--section grid-->
+        <div class="grid">
+            <a href="meine_erste_website/index.php" onmouseover="background_img_1_opacity_up()"
+                onmouseout="background_img_opacity_down()" class="mobile_or_pc">
+
+                <!--section-->
+                <div class="box">
+                    <section>
+
+                        <!--background image-->
+                        <img src="img/meine_erste_website.png" alt="Website" class="demo_image" id="img_1">
+
+                        <!--title-->
+                        <h2>
+                            <span class="de">Meine erste Website</span>
+                            <span class="fr">Mon premier site web</span>
+                            <span class="en">My first Website</span>
+                        </h2>
+
+                        <!--message-->
+                        <p class="not_compatible">
+                            <span class="de">Nicht kompatibel mit dem Aktuellen Gerät</span>
+                            <span class="fr">Non compatible avec l'appareil actuel</span>
+                            <span class="en">Not compatible for the current device</span>
+                        </p>
+                    </section>
+                </div>
+            </a>
+            <a href="the_last_chance/the_last_chance_html.html" onmouseover="background_img_2_opacity_up()"
+                onmouseout="background_img_opacity_down()" class="mobile_or_pc">
+
+                <!--section-->
+                <div class="box">
+                    <section>
+
+                        <!--background image-->
+                        <img src="img/the_last_chance.png" alt="Spiel" class="demo_image" id="img_2">
+
+                        <!--title-->
+                        <h2>The Last Chance</h2>
+
+                        <!--message-->
+                        <p class="not_compatible">
+                            <span class="de">Nicht kompatibel mit dem Aktuellen Gerät</span>
+                            <span class="fr">Non compatible avec l'appareil actuel</span>
+                            <span class="en">Not compatible for the current device</span>
+                        </p>
+                    </section>
+                </div>
+            </a>
+            <a href="" onmouseover="" onmouseout="" class="mobile_or_pc">
+
+                <!--section-->
+                <div class="box">
+                    <section>
+
+                        <!--title-->
+                        <h2>
+                            <span class="de">Zeiterfassung</span>
+                            <span class="fr">suivi du temps</span>
+                            <span class="en">time tracking</span>
+                        </h2>
+
+                        <!--message-->
+                        <p>
+                            <span class="de">noch nicht fertig</span>
+                            <span class="fr">Pas encore fini</span>
+                            <span class="en">not finished yet</span>
+                        </p>
+                    </section>
+                </div>
+            </a>
+            <a href="" onmouseover="" onmouseout="" class="mobile_or_pc">
+
+                <!--section-->
+                <div class="box">
+                    <section>
+
+                        <!--title-->
+                        <h2>...</h2>
+                    </section>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!--footer-->
+    <footer>
+        <h2>Copyright © 2022 David Esteves Rodrigues. All rights reserved.</h2>
+
+        <!--links-->
+        <h2>
+            <span class="de">Weitere Links:</span>
+            <span class="fr">Plus de liens :</span>
+            <span class="en">More links:</span>
+        </h2>
+        <a onclick="open_impressum()" style="cursor: pointer;">Impressum</a><br><br>
+        <a href="javascript:void(0)">link</a><br><br>
+        <a href="javascript:void(0)">link</a>
+    </footer>
+    <script src="javascript.js"></script>
+</body>
+
+</html>

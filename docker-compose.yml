@@ -1,0 +1,7 @@
+version: "3"
+services:
+  todoapp:
+    build: ./web-frontend
+    ports:
+     - "3000"
+

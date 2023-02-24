@@ -1,0 +1,619 @@
+@charset "utf-8";
+
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+body
+{
+  background-image: url("hintergrundbild.jpg");
+  background-color: #555555;
+  font-family: Arial, Lato, Sans-Serif, Roboto;
+}
+
+button
+{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-left: 1vw;
+  margin-bottom: 2vh;
+  background-color: grey;
+  border-color: black;
+  font-size: 1vw;
+  z-index: 1;
+}
+
+/*----------------------------------------------------------*/
+
+form
+{
+  text-align: center;
+  margin: 3%;
+  color: white;
+}
+
+input
+{
+  font-family: Arial, Lato, Sans-Serif, Roboto;
+  font-size: 26px;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 1%;
+  transition: 0.5s;
+  transform: scale(1);
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+input:focus
+{
+  transition: 0.5s;
+  transform: scale(1.5);
+  background-color: lightblue;
+  outline: none;
+}
+
+input:hover
+{
+  transition: 0.5s;
+  transform: scale(1.5);
+  outline: none;
+}
+
+.text_registrieren
+{
+  color: white;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.text_registrieren p
+{
+  text-align: center;
+  margin-top: 2%;
+  text-decoration: none;
+}
+
+.text_registrieren a:hover
+{
+  background-color: #5B5B5B;
+  opacity: 0,2;
+}
+
+.text_registrieren h3
+{
+  color: white;
+  text-align: center;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+.error
+{
+  color: #ff3333;
+}
+
+.abmelden:hover
+{
+  background-color: #ff4b4b;
+}
+
+.update
+{
+  color: #2eb82e;
+}
+
+small
+{
+  color: white;
+  margin-bottom: 10%;
+}
+
+/*----------------------------------------------------------*/
+
+/*Bilder*/
+
+.bild_von_mir
+{
+  border-right: 5px solid #000000;
+  padding: 2% 5% 55% 2%;
+  background-image: url("nav_hintergrundbild.jpg");
+  float: left;
+  width: 225px;
+  height: 300px;
+  margin-right: 2%;
+}
+
+
+.bildbahnhof
+{ 
+  padding: 0;
+  width: 100%;
+  border: 7px solid #000000;
+  margin-top: 4%;
+}
+
+
+
+.htmlbild
+{
+  padding: 0;
+  width: 20%;
+  border: 7px solid #000000;
+  margin-top: 2%
+}
+
+
+
+.bild_firma
+{
+  padding: 0;
+  border: 7px solid #000000;
+  width: 30%;
+  margin-top: 2%;
+  margin-bottom: 4%;
+}
+
+
+.karneval_portugal
+{
+  padding: 0;
+  border: 7px solid #000000;
+  width: 20%;
+  margin: 0% 0% 0% 2%;
+}
+
+
+
+.essen_protugal
+{
+  padding: 0;
+  border: 7px solid #000000;
+  width: 20%;
+  margin: 0% 0% 0% 2%;
+}
+
+/*Bilder*/
+
+/*----------------------------------------------------------*/
+
+figure
+{
+  float: left;
+  margin: 10% 0% 0% 1%;
+}
+
+
+
+
+figcaption
+{
+  color: #FFFFFF;
+  margin-bottom: 8%;
+}
+
+/*----------------------------------------------------------*/
+
+/*Titel*/
+
+h3
+{
+  margin-top: 10%;
+  font-size: 26pt;
+}
+
+
+
+h2
+{
+  font-weight: 1000;
+  font-size: 42pt;
+}
+
+/*Titel*/
+
+/*link's*/
+
+a
+{
+  color: #00ABFF;
+}
+
+
+footer a:hover
+{
+  background-color: #5B5B5B;
+  opacity: 0,2;
+}
+
+
+.copy_right
+{
+  color: #FFFFFF;
+  width: 100%; 
+  text-align: center;
+  position: relative;
+  clear: both;
+  padding: 1.5% 0% 1.5% 0%;
+  background-image: url("nav_hintergrundbild.jpg");
+  border-top: 7px solid #000000;
+}
+
+
+
+.footerlink
+{
+  color: #00ABFF;
+  position: relative;
+  clear: both;
+  text-align: center
+}
+
+
+
+.website_fr
+{
+  position: fixed;
+  text-align: right;
+  right: 0;
+  bottom: 0;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  padding: 0;
+  text-decoration: none;
+}
+
+
+
+.website_en
+{
+  position: fixed;
+  text-align: right;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 1%;
+  margin-right: 2%;
+  padding: 0;
+  text-decoration: none;
+}
+
+
+
+.website_de
+{
+  position: fixed;
+  text-align: right;
+  right: 0;
+  bottom: 0;
+  margin-right: 2%;
+  margin-bottom: 1%;
+  padding: 0;
+  text-decoration: none;
+}
+
+
+
+.website_de_beim_fr
+{
+  position: fixed;
+  text-align: right;
+  right: 0;
+  bottom: 0;
+  margin-right: 2%;
+  margin-bottom: 1%;
+  padding: 0;
+  text-decoration: none;
+}
+
+.website_en_beim_fr
+{
+  position: fixed;
+  text-align: right;
+  right: 0;
+  bottom: 0;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  padding: 0;
+  text-decoration: none;
+}
+
+/*link's*/
+
+
+/*Nav bar*/
+
+nav
+{
+  text-align: center;
+  border-bottom: 7px solid;
+  font-size: 2.2em;
+  background-image: url("nav_hintergrundbild.jpg");
+}
+
+
+
+nav li
+{
+  display: inline-block;
+  padding: 1.5%;
+  transition: transform .5s;
+}
+
+
+
+nav a
+{
+  color: white;
+  text-decoration: none;
+}
+
+
+
+nav li:hover
+{
+  transition: 0.5s;
+  transform: scale(1.4);
+}
+
+.login_teil
+{
+  text-align: right;
+  display: inline-table;
+  font-size: 20px;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  padding-left: 2%;
+}
+
+/*Nav bar*/
+
+
+
+.text_startseite 
+{
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  font-style: normal;
+  color: white;
+  font-size: 28pt;
+  display: block;
+}
+
+
+
+.text_startseite p
+{
+  padding-top: 2%;
+  font-size: 18pt;
+}
+
+
+
+/*----------------------------------------------------------*/
+
+
+
+.text_wer_ich_bin_left
+{
+  display: inline-block;
+  text-align: left;
+  margin-top: 2%;
+  color: white;
+  font-style: normal;
+  font-size: 24pt;
+}
+
+.text_wer_ich_bin_left h2
+{
+  padding-bottom: 10%;
+}
+
+
+
+.text_wer_ich_bin_left p
+{
+  padding-top: 4%;
+  font-size: 28pt;
+}
+
+
+
+.text_wer_ich_bin_right
+{
+  display: inline-block;
+  text-align: left;
+  padding-left: 10%;
+  color: white;
+  font-size: 24pt;
+}
+
+
+
+.text_wer_ich_bin_right p
+{
+  padding-top: 5.9%;
+  font-size: 28pt;
+}
+
+
+
+
+.text_wer_ich_bin_bottom p
+{
+  padding-top: 4%;
+  font-size: 18pt;
+  color: white;
+}
+
+
+
+/*----------------------------------------------------------*/
+
+
+
+.text_meine_hobbies_top 
+{
+  display: block;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  color: white;
+  font-style: normal;
+  font-size: 28pt;
+}
+
+
+
+.text_meine_hobbies_top p
+{
+  padding-top: 2%;
+  font-size: 18pt;
+}
+
+
+
+.text_meine_hobbies_top a
+{
+  font-size: 18pt;
+}
+
+
+
+.text_meine_hobbies_top a:hover
+{
+  background-color: #5B5B5B;
+  opacity: 0,2;
+}
+
+
+
+.links_in_die_mitte
+{
+  text-align: center;
+  margin-left: 2%;
+}
+
+
+
+/*----------------------------------------------------------*/
+
+
+
+.text_mein_wohnort
+{
+  display: block;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  color: white;
+  font-style: normal;
+  font-size: 28pt;
+}
+
+
+
+.text_mein_wohnort p
+{
+  padding-top: 4%;
+  font-size: 18pt;
+}
+
+
+
+/*----------------------------------------------------------*/
+
+
+
+.text_meine_familie 
+{
+  display: block;
+  margin-top: 2%;
+  color: white;
+  font-style: normal;
+  font-size: 28pt;
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+
+
+.text_meine_familie p
+{
+  margin-top: 4%;
+  font-size: 18pt;
+}
+
+
+
+.text_meine_familie ul
+{
+  margin-top: 4%;
+  font-size: 18pt;
+  margin-left: 2%;
+}
+
+
+
+/*----------------------------------------------------------*/
+
+
+
+.text_meine_nationalitaet
+{
+  margin-top: 2%;
+  margin-bottom: 8%;
+  font-size: 28pt;
+  color: white;
+}
+
+
+.text_meine_nationalitaet h2
+{
+  margin-left: 2%;
+}
+
+
+.text_meine_nationalitaet a
+{
+  font-size: 18pt;
+}
+
+
+
+.text_meine_nationalitaet a:hover
+{
+  background-color: #5B5B5B;
+  opacity: 0,2;
+}
+
+
+.text_meine_nationalitaet a
+{
+  margin-left: 2%;
+}
+
+
+
+.text_meine_nationalitaet p
+{
+  display: block;
+  padding: 2% 0% 2% 2%;
+  color: white;
+  font-style: normal;
+  font-size: 18pt;
+}
+
+
+
+.text_unter_bilder p
+{
+  margin-top: 16%;
+}

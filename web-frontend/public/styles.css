@@ -1,0 +1,715 @@
+@charset "UTF-8";
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*the font family can be changed in this line (currently using "Geneva")*/
+    padding: 0;
+    margin: 0;
+}
+
+body
+
+/*default grandient color if the video can't be loaded*/
+    {
+    background: linear-gradient(to left top, rgb(0, 0, 0), rgb(141, 141, 141));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+video
+
+/*sets all the videos into the background & adjusts the size+*/
+    {
+    z-index: -1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+ul,
+li {
+    display: inline;
+    vertical-align: middle;
+}
+
+li
+
+/*sets a defined space between the li tags (links to go to the other pages)*/
+    {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+map {
+    display: inline;
+}
+
+h2 {
+    color: white;
+}
+
+/*underlined animation when hovering a link of the navbar*/
+
+nav span {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-weight: 700;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a h2 {
+    display: inline;
+}
+
+nav span::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.3vh;
+    border-radius: 4px;
+    background-color: #adadad;
+    bottom: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav span:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/*underlined animation when hovering a link of the navbar*/
+
+nav
+
+/*the whole navbar is being designed with this class tag "does not apply everything on the other navbar for smaller devices"*/
+    {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 3vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    width: 95%;
+    background-color: rgba(41, 41, 41, 0.9);
+    border-style: solid;
+    border-color: rgb(87, 87, 87);
+    border-radius: 1vw;
+    border-width: 0.2vw;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+}
+
+footer
+
+/*the footer is being designed with this class tag*/
+    {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: auto;
+    width: 95%;
+    margin-top: 2em;
+    padding-bottom: 2em;
+    clear: both;
+    background-color: rgba(41, 41, 41, 0.9);
+    border-style: solid;
+    border-color: rgb(87, 87, 87);
+    border-width: 0.2vw;
+    border-bottom: 0;
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+    text-align: center;
+}
+
+.de,
+.fr,
+.en {
+    display: none;
+}
+
+#kontakte_big,
+#kontakte_small
+
+/*aligns the images that are linked with the map tag to the middle*/
+    {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+}
+
+#close_button img:hover {
+    cursor: pointer;
+}
+
+#hamburger_menu img:hover {
+    cursor: pointer;
+}
+
+select:hover {
+    background-color: rgb(70, 70, 70);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 899px)
+
+/*changes the image that uses map tag to its smaller version*/
+    {
+    #kontakte_small {
+        display: none;
+        width: 250px;
+    }
+}
+
+@media only screen and (min-width: 900px)
+
+/*changes the image that uses map tag to its bigger version*/
+    {
+    #kontakte_big {
+        display: none;
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 1150px)
+
+/*if the device width is bigger than 1150px, the links on the navbar will disapear and the hamburger menu will be displayed on the top left corner*/
+    {
+    .links {
+        display: none;
+    }
+
+    #side_navbar {
+        border: none;
+        text-align: center;
+        width: 100%;
+        background: linear-gradient(to top left, rgb(61, 61, 61, 0), rgb(83, 83, 83, 0));
+    }
+
+    #side_navbar ul {
+        display: inline;
+    }
+
+    #side_navbar li {
+        display: block;
+        margin-top: 2vh;
+    }
+
+    #menu_display
+
+    /*this is the navbar for smaller devices "shows itself when the hamburger menu image is clicked (top left). slides from the left"*/
+        {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 40vmin;
+        background: linear-gradient(to top left, rgb(61, 61, 61), rgb(83, 83, 83));
+        transform: translateX(-100%);
+        visibility: hidden;
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+@media only screen and (min-width: 1151px)
+
+/*if the device width is smaller than 1151px, the hamburger menu will disapear and the links will be shown on the standard navbar (the one at the top of every page)*/
+    {
+    #hamburger_menu {
+        display: none;
+    }
+
+    #menu_display,
+    #close_button {
+        display: none;
+    }
+
+    nav h2 {
+        font-size: 1.6vw;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    .fix_to_bottom
+
+    /*if footer does not remain on bottom of page (this does the trick)*/
+        {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    h1 {
+        color: white;
+        font-size: 5.5vh;
+        margin-top: 2vh;
+        text-align: center;
+    }
+
+    section
+
+    /*controls all the sections of every page*/
+        {
+        background-color: rgba(54, 54, 54, 0.8);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: 65vw;
+        height: 65vw;
+        margin-top: 1em;
+        border-style: solid;
+        border-color: rgb(87, 87, 87);
+        border-radius: 1vw;
+        border-width: 0.2vw;
+    }
+
+    section h2
+
+    /*section titles*/
+        {
+        text-align: center;
+        font-size: 3.2vh;
+        padding: 1vw;
+    }
+
+    .grid
+
+    /*this is the grid where all the sections are located inside (space between the sections can be changed here. Including how many columns there shoud be) "located in 2 pages"*/
+        {
+        display: grid;
+        grid-template-columns: auto;
+        /*add more "auto" to this line to have more columns (2 columns = auto, auto)*/
+        gap: 1vw;
+        /*space between the items (in this case between the sections)*/
+        justify-content: center;
+        margin-top: 2vh;
+    }
+
+    p {
+        text-align: center;
+        padding: 1em;
+        color: white;
+        font-size: 2.2vh;
+    }
+
+    .box {
+        margin: 4vh;
+    }
+
+    #img_1,
+    #img_2,
+    #img_3,
+    #img_4,
+    #img_5,
+    #img_6
+
+    /*all the images are hidden (only in "index.html"). The javascript.js file is responsible to then show the images when the sections on page "index.html" are hovered*/
+        {
+        display: none;
+    }
+
+    .wide_grid section {
+        width: 65vw;
+        min-height: 80vh;
+    }
+
+    .wide_grid img {
+        width: 100%;
+        border-top-left-radius: 0.8vw;
+        border-top-right-radius: 0.8vw;
+    }
+
+    #side_navbar h2 {
+        font-size: 1.4vh;
+    }
+
+    #close_button img {
+        width: 2vh;
+    }
+
+    .home {
+        width: 2.5vh;
+    }
+
+    #hamburger_menu img {
+        width: 4vh;
+    }
+
+    select
+
+    /*this is the select class tag. It controls all the selects that are located on every page (top right. inside of the navbar)*/
+        {
+        background-color: rgba(70, 70, 70, 0.6);
+        color: white;
+        border: none;
+        font-size: 1.5vh;
+        width: 10vh;
+        height: 4vh;
+    }
+
+    footer h2 {
+        padding: 2em;
+        font-size: 1.4vh;
+    }
+
+    footer a {
+        font-size: 1.6vh;
+        text-decoration: none;
+        color: #3b93f7;
+    }
+
+    #impressum h2 {
+        padding-top: 1.5em;
+        font-size: 2vh;
+    }
+
+    #impressum p {
+        padding-top: 1em;
+        font-size: 1.5vh;
+    }
+
+    .bild_von_mir
+
+    /*image located in "ueber_mich.html"*/
+        {
+        float: right;
+        width: 20vh;
+        margin: 0.5em;
+    }
+
+    .bild_von_code
+
+    /*image located in "ueber_mich.html"*/
+        {
+        float: left;
+        width: 25vh;
+        margin: 0.5em;
+    }
+
+    .bild_von_profil
+
+    /*image located in "familie.html"*/
+        {
+        float: left;
+        width: 25vh;
+        margin: 0.5em;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    h1 {
+        color: white;
+        font-size: 5.5vw;
+        margin-top: 2vh;
+        text-align: center;
+    }
+
+    section {
+        background-color: rgba(54, 54, 54, 0.8);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: 25vw;
+        height: 25vw;
+        border-style: solid;
+        border-color: rgb(87, 87, 87);
+        border-radius: 1vw;
+        border-width: 0.2vw;
+    }
+
+    section h2 {
+        text-align: center;
+        font-size: 2.2vw;
+        padding: 1vw;
+        padding-top: 0;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1vw;
+        justify-content: center;
+        margin-top: 2vh;
+    }
+
+    /*hover animation for sections*/
+
+    .box {
+        transform: scale(1);
+        transition-duration: 0.5s;
+    }
+
+    .box:hover {
+        transform: scale(1.05);
+        transition-duration: 0.5s;
+    }
+
+    /*hover animation for sections*/
+
+    p {
+        text-align: center;
+        padding: 1em;
+        color: white;
+        font-size: 1.2vw;
+    }
+
+    .section_image
+
+    /*located in "index.html". Makes an image fit inside the section*/
+        {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 1vw;
+        opacity: 0;
+    }
+
+    .demo_image
+
+    /*located in "demos.html". Makes an image fit inside the section*/
+        {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 1vw;
+        opacity: 0.3;
+    }
+
+    .wide_grid section {
+        width: 85vw;
+        height: 30vh;
+    }
+
+    .wide_grid img {
+        min-width: 17%;
+        height: 100%;
+    }
+
+    .left_section h2 {
+        text-align: left;
+    }
+
+    .left_section p {
+        text-align: left;
+        float: left;
+        max-width: 30%;
+    }
+
+    .left_section img {
+        float: right;
+        border-top-right-radius: 0.8vw;
+        border-bottom-right-radius: 0.8vw;
+    }
+
+    .right_section h2 {
+        text-align: right;
+    }
+
+    .right_section p {
+        float: right;
+        text-align: right;
+        max-width: 30%;
+    }
+
+    .right_section img {
+        float: left;
+        border-top-left-radius: 0.8vw;
+        border-bottom-left-radius: 0.8vw;
+    }
+
+    #side_navbar h2 {
+        font-size: 2vw;
+    }
+
+    #close_button img
+
+    /*"X" button to close the navbar for smaller devices*/
+        {
+        width: 3vw;
+    }
+
+    .home
+
+    /*home button to go back to the Start page ("index.html")*/
+        {
+        width: 3.5vw;
+    }
+
+    #hamburger_menu img
+
+    /*the image button that opens the navbar for smaller devices*/
+        {
+        width: 3.5vw;
+    }
+
+    select {
+        background-color: rgba(70, 70, 70, 0.6);
+        color: white;
+        border: none;
+        font-size: 1.5vw;
+        width: 10vw;
+        height: 4vw;
+    }
+
+    footer h2 {
+        padding: 2em;
+        font-size: 1.4vw;
+    }
+
+    footer a {
+        font-size: 1.3vw;
+        text-decoration: none;
+        color: #3b93f7;
+    }
+
+    #impressum h2 {
+        padding-top: 1.5em;
+        font-size: 1.8vw;
+    }
+
+    #impressum p {
+        padding-top: 1em;
+        font-size: 1vw;
+    }
+
+    .bild_von_mir
+
+    /*image located in "ueber_mich.html"*/
+        {
+        float: right;
+        width: 20vw;
+        margin: 0.5em;
+    }
+
+    .bild_von_code
+
+    /*image located in "ueber_mich.html"*/
+        {
+        float: left;
+        width: 25vw;
+        margin: 0.5em;
+    }
+
+    .bild_von_profil
+
+    /*image located in "familie.html"*/
+        {
+        float: left;
+        width: 14vw;
+        margin: 0.5em;
+    }
+}
+
+.not_compatible {
+    visibility: hidden;
+}
+
+/*only for "demos.html". checks if the device is mobile or if it is a PC/laptop. If it isn't a PC or a laptop, then a message will apear inside the section saying that the demos can't be opened*/
+
+@media (hover:none),
+(hover:on-demand) {
+    .mobile_or_pc {
+        pointer-events: none;
+    }
+
+    .not_compatible {
+        visibility: visible;
+    }
+}
+
+/*only for "demos.html".*/
+
+.lang
+
+/*makes the language selector always float on the right side of the navbar*/
+    {
+    float: right;
+}
+
+.grid a {
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+.wide_grid
+
+/*this is the grid that is located in the "projekte.html" page.*/
+    {
+    display: grid;
+    grid-template-columns: auto;
+    /*add more "auto" to this line to have more columns (2 columns = auto, auto)*/
+    gap: 1vw;
+    /*space between the items (in this case between the sections)*/
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+#impressum
+
+/*this is the impressum. It will be displayed as soon as the link on the footer saying "impressum" is clicked (as a modal)*/
+    {
+    text-align: center;
+    width: 70vw;
+    height: 90vh;
+    position: fixed;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(55, 55, 55);
+    z-index: 2;
+    overflow: auto;
+    transform: translateY(-100%);
+    visibility: hidden;
+}
+
+#impressum img
+
+/*this is the "X" button to close the modal that is showing the impressum*/
+    {
+    width: 5%;
+    float: right;
+    margin-top: 1em;
+    margin-right: 1em
+}
+
+#impressum img:hover {
+    cursor: pointer;
+}
+
+#impressum_shadow
+
+/*this is the shadow that will appear when the impressum is opened*/
+    {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(55, 55, 55, 0.7);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*to link the css that is not in the same folder as the html file, use: ../styles.css*/
